@@ -1,0 +1,39 @@
+<h1>Listing pregunta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Clue1</th>
+      <th>Clue2</th>
+      <th>Fake answer1</th>
+      <th>Fake answer2</th>
+      <th>Fake answer3</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pregunta.each do |preguntum| %>
+      <tr>
+        <td><%= preguntum.question %></td>
+        <td><%= preguntum.answer %></td>
+        <td><%= preguntum.clue1 %></td>
+        <td><%= preguntum.clue2 %></td>
+        <td><%= preguntum.fake_answer1 %></td>
+        <td><%= preguntum.fake_answer2 %></td>
+        <td><%= preguntum.fake_answer3 %></td>
+        <td><%= link_to 'Show', preguntum %></td>
+        <td><%= link_to 'Edit', edit_preguntum_path(preguntum) %></td>
+        <td><%= link_to 'Destroy', preguntum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preguntum', new_preguntum_path %>

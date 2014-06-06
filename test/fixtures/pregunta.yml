@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyString
+  answer: MyString
+  clue1: MyString
+  clue2: MyString
+  fake_answer1: MyString
+  fake_answer2: MyString
+  fake_answer3: MyString
+
+two:
+  question: MyString
+  answer: MyString
+  clue1: MyString
+  clue2: MyString
+  fake_answer1: MyString
+  fake_answer2: MyString
+  fake_answer3: MyString
