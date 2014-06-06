@@ -1,39 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	<div class="panel">
+		
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Question:</strong>
-  <%= @preguntum.question %>
-</p>
+		<p>
+		<strong>Question:</strong>
+			<%= @preguntum.question %>
+		</p>
 
-<p>
-  <strong>Answer:</strong>
-  <%= @preguntum.answer %>
-</p>
+		<p>
+		<strong>Answer:</strong>
+			<%= @preguntum.answer %>
+		</p>
 
-<p>
-  <strong>Clue1:</strong>
-  <%= @preguntum.clue1 %>
-</p>
+		<p>
+		<strong>Clue1:</strong>
+			<%= @preguntum.clue1 %>
+		</p>
 
-<p>
-  <strong>Clue2:</strong>
-  <%= @preguntum.clue2 %>
-</p>
+		<p>
+		<strong>Clue2:</strong>
+			<%= @preguntum.clue2 %>
+		</p>
 
-<p>
-  <strong>Fake answer1:</strong>
-  <%= @preguntum.fake_answer1 %>
-</p>
+		<p>
+		<strong>Fake answer1:</strong>
+			<%= @preguntum.fake_answer1 %>
+		</p>
 
-<p>
-  <strong>Fake answer2:</strong>
-  <%= @preguntum.fake_answer2 %>
-</p>
+		<p>
+		<strong>Fake answer2:</strong>
+			<%= @preguntum.fake_answer2 %>
+		</p>
 
-<p>
-  <strong>Fake answer3:</strong>
-  <%= @preguntum.fake_answer3 %>
-</p>
+		<p>
+		<strong>Fake answer3:</strong>
+			<%= @preguntum.fake_answer3 %>
+		</p>
 
-<%= link_to 'Edit', edit_preguntum_path(@preguntum) %> |
-<%= link_to 'Back', pregunta_path %>
+		<%= link_to 'Edit', edit_preguntum_path(@preguntum) %> |
+		<%= link_to 'Back', pregunta_path %>
+	</div>
+</div>
