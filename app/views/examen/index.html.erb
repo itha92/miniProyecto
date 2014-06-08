@@ -1,3 +1,33 @@
 <div class="row">
 	<h2>Pagina de examen</h2>
 </div>
+	<% @preguntas.each do |pregunta|%>
+		<div class="panel">
+			<div class="row">
+				<div class="large-10 columns">
+					<h3 class="subheader"><%= pregunta.question %>?</h3>
+					<div data-alert class="alert-box" style="display:none">
+						<%= pregunta.clue1 %>
+						<a href="#" class="close">&times;</a>
+					</div>
+					<div data-alert class="alert-box" style="display:none">
+						<%= pregunta.clue2%>
+						<a href="#" class="close">&times;</a>
+					</div>
+				</div>
+				<div class="large-2 columns">
+					<a class="show-hint">
+						<i class="fi-lightbulb small"></i><span>Hint</span>
+					</a>
+				</div>
+				<div class="large-12 columns">
+						<select>
+							<option><%= pregunta.fake_answer1%></option>
+							<option><%= pregunta.fake_answer2%></option>
+							<option><%= pregunta.answer%></option>
+							<option><%= pregunta.fake_answer3%></option>
+						</select>	
+				</div>
+			</div>
+		</div>
+	<% end %>
