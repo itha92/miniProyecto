@@ -13,3 +13,5 @@ $('.show-hint').on('click',function(){
 $('.close').on('click',function(){
 	$(this).parent().hide();
 });
+
+$('.submit_btn');

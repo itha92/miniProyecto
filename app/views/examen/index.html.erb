@@ -21,7 +21,7 @@
 					</a>
 				</div>
 				<div class="large-12 columns">
-						<select>
+						<select class="select_opt">
 							<option><%= pregunta.fake_answer1%></option>
 							<option><%= pregunta.fake_answer2%></option>
 							<option><%= pregunta.answer%></option>
@@ -31,3 +31,6 @@
 			</div>
 		</div>
 	<% end %>
+	<div class="row">
+		<input type="button" id="submit_btn" class="button" value="Submit">
+	</div>
