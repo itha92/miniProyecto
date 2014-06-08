@@ -1,37 +1,40 @@
-<h1>Listando pregunta</h1>
+<div class="row">
+	
+	<h1>Mostrando preguntas</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-      <th>Clue1</th>
-      <th>Clue2</th>
-      <th>Fake answer1</th>
-      <th>Fake answer2</th>
-      <th>Fake answer3</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<table>
+		<thead>
+			<tr>
+			<th>Question</th>
+			<th>Answer</th>
+			<th>Clue1</th>
+			<th>Clue2</th>
+			<th>Fake answer1</th>
+			<th>Fake answer2</th>
+			<th>Fake answer3</th>
+			<th></th>
+			<th></th>
+			<th></th>
+			</tr>
+		</thead>
 
-  <tbody>
-    <% @pregunta.each do |preguntum| %>
-      <tr>
-        <td><%= preguntum.question %></td>
-        <td><%= preguntum.answer %></td>
-        <td><%= preguntum.clue1 %></td>
-        <td><%= preguntum.clue2 %></td>
-        <td><%= preguntum.fake_answer1 %></td>
-        <td><%= preguntum.fake_answer2 %></td>
-        <td><%= preguntum.fake_answer3 %></td>
-        <td><%= link_to 'Ver', preguntum %></td>
-        <td><%= link_to 'Editar', edit_preguntum_path(preguntum) %></td>
-        <td><%= link_to 'Eliminar', preguntum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		<tbody>
+			<% @pregunta.each do |preguntum| %>
+			<tr>
+				<td><%= preguntum.question %></td>
+				<td><%= preguntum.answer %></td>
+				<td><%= preguntum.clue1 %></td>
+				<td><%= preguntum.clue2 %></td>
+				<td><%= preguntum.fake_answer1 %></td>
+				<td><%= preguntum.fake_answer2 %></td>
+				<td><%= preguntum.fake_answer3 %></td>
+				<td><%= link_to 'Ver', preguntum %></td>
+				<td><%= link_to 'Editar', edit_preguntum_path(preguntum) %></td>
+				<td><%= link_to 'Eliminar', preguntum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
 
-<%= link_to 'Nueva Pregunta', new_preguntum_path, :class => 'button' %>
+	<%= link_to 'Nueva Pregunta', new_preguntum_path, :class => 'button' %>
+</div>
