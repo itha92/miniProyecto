@@ -7,19 +7,25 @@
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-			<h3>Seleccione una opcion:</h3>
+		
 		</div>
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-			<img src="img1.jpg">
+			
 		</div>
 	</div>
+  <center>   <img src="img1.jpg"> 
+    <p>
+        </p>
+    <%= link_to "Empezar Examen", {:controller => :examen, :action => :index}, class: 'button' %> </center>
 	<div class="row">
 		<div class="large-12 columns">
 			<div class="panel callout">
 				<%= link_to "Ver Preguntas", {:controller => :pregunta, :action => :index}, class: 'button' %>
-				<button>Opcion 3</button>
+        <button>Opcion 3</button>
+        
+      
 			</div>
 		</div>
 	</div>
