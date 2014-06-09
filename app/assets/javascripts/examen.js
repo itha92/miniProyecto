@@ -32,15 +32,24 @@ $.each($('.select_opt'), function(ps,el){
 });
 
 $('#submit_btn').on('click',function(){
+	$(this).attr('disabled',true);
 	var $arr = $('.select_opt :selected').parent();
 	$.post( "/verify", function( data ) {
 		$.each($arr, function(index, element){
 			if (data[index].answer === $($arr[index]).children(':selected').text()) {
 				$($arr[index]).parent().siblings().find('.subheader').prepend('<i class="fi-check"> </i>');
-				//.prepend('<i class="fi-check"></i>')
+				$('.score').text($('.fi-check').length + "/" + $('.panel').length );
 			}else{
 				$($arr[index]).parent().siblings().find('.subheader').prepend('<i class="fi-x"> </i>');
 			}
 		});
 	});
+
+	setTimeout(updateScore(),1000);
+	
 });
+
+var updateScore = function(){
+	
+	$('.alert-box.success.radius').show();
+}
