@@ -1,7 +1,7 @@
 <div class="row">
 	<h2>Pagina de examen</h2>
 </div>
-	<% @preguntas.each do |pregunta|%>
+	<% $preguntas.each do |pregunta|%>
 		<div class="panel">
 			<div class="row">
 				<div class="large-10 columns">
@@ -21,7 +21,7 @@
 					</a>
 				</div>
 				<div class="large-12 columns">
-						<select class="select_opt">
+						<select class="select_opt" id="<%= pregunta.id%>">
 							<option><%= pregunta.fake_answer1%></option>
 							<option><%= pregunta.fake_answer2%></option>
 							<option><%= pregunta.answer%></option>

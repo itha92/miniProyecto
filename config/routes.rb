@@ -4,6 +4,8 @@ MiniProyecto::Application.routes.draw do
 
   get '/examen' => 'examen#index'
 
+  post '/verify' => 'examen#verify'
+
   resources :pregunta
 
   # The priority is based upon order of creation: first created -> highest priority.

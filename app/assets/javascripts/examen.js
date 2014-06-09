@@ -14,4 +14,33 @@ $('.close').on('click',function(){
 	$(this).parent().hide();
 });
 
-$('.submit_btn');
+var shuffleArray = function (array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
+//pendiente shufulear todos los elementos del group list de las respuestas
+
+$.each($('.select_opt'), function(ps,el){
+	var $tmp = shuffleArray($(el).children());
+	$(el).children().replaceWith($tmp);
+});
+
+$('#submit_btn').on('click',function(){
+	var $arr = $('.select_opt :selected').parent();
+	$.post( "/verify", function( data ) {
+		$.each($arr, function(index, element){
+			if (data[index].answer === $($arr[index]).children(':selected').text()) {
+				$($arr[index]).parent().siblings().find('.subheader').prepend('<i class="fi-check"> </i>');
+				//.prepend('<i class="fi-check"></i>')
+			}else{
+				$($arr[index]).parent().siblings().find('.subheader').prepend('<i class="fi-x"> </i>');
+			}
+		});
+	});
+});
